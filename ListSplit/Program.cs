@@ -12,13 +12,10 @@ namespace ListSplit
         static 
         void 
         Main(
-                string[] args)
+            string[]                            args)
         {
-            var items =                 
-                Enumerable.Range(0, 49)
-                .ToList();
-
-            items
+            Enumerable.Range(0, 49)
+            .ToList()
             .Chunk(10)
             .Select(
                 subSet =>
@@ -30,7 +27,6 @@ namespace ListSplit
                     return 1;
                 })
             .Sum();
-        
         }
 
         static
